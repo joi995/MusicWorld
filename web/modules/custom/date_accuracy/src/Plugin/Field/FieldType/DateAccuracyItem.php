@@ -21,10 +21,38 @@ use Drupal\Core\TypedData\DataDefinition;
 *   default_formatter = "default_date_accuracy_formatter"
 * )
 */
-class DateAccuracyItem extends FieldItemBase {
+class DateAccuracyItem extends FieldItemBase
+{
   use StringTranslationTrait;
 
-  public static function schema(FieldStorageDefinitionInterface $field_definition) {
+  /**
+   * {@inheritdoc}
+   */
+  public static function defaultStorageSettings()
+  {
+    return [] + parent::defaultStorageSettings();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function defaultFieldSettings()
+  {
+    return [] + parent::defaultFieldSettings();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function storageSettingsForm(array &$form, FormStateInterface $form_state, $has_data)
+  {
+    $elements = [];
+    return $elements + parent::storageSettingsForm($form, $form_state, $has_data);
+  }
+
+
+  public static function schema(FieldStorageDefinitionInterface $field_definition)
+  {
     $schema = [
       'columns' => [
         'date' => [
@@ -36,10 +64,34 @@ class DateAccuracyItem extends FieldItemBase {
 
     return $schema;
   }
-  public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
+
+  public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition)
+  {
     $properties['date'] = DataDefinition::create('string')
       ->setLabel(t('Date'));
 
     return $properties;
+  }
+
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getConstraints()
+  {
+    $constraints = parent::getConstraints();
+    $constraint_manager = \Drupal::typedDataManager()->getValidationConstraintManager();
+
+    return $constraints;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function isEmpty()
+  {
+    // We consider the field empty if either of the properties is left empty.
+    $date = $this->get('number')->getValue();
+    return $date === NULL || $date === '';
   }
 }
