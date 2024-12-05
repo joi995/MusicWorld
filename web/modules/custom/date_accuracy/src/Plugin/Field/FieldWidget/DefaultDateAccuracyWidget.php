@@ -79,8 +79,8 @@ class DefaultDateAccuracyWidget extends WidgetBase
       '@code' => $this->getSetting('code_size'),
     ]);
     $placeholder_settings = $this->getSetting('placeholder');
-    if (!empty($placeholder_settings['number']) && !empty($placeholder_settings['code'])) {
-      $placeholder = $placeholder_settings['number'] . ' ' . $placeholder_settings['code'];
+    if (!empty($placeholder_settings['date'])) {
+      $placeholder = $placeholder_settings['date'];
       $summary[] = $this->t('Placeholder: @placeholder', ['@placeholder' => $placeholder]);
     }
     $summary[] = $this->t('Fieldset state: @state', ['@state' => $this->getSetting('fieldset_state')]);
@@ -115,5 +115,17 @@ class DefaultDateAccuracyWidget extends WidgetBase
     ];
 
     return $element;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function massageFormValues(array $values, array $form, FormStateInterface $form_state) {
+    foreach ($values as &$value) {
+      $value['date'] = $value['details']['date'];
+      unset($value['details']);
+    }
+
+    return $values;
   }
 }
