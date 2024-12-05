@@ -1,0 +1,14 @@
+hello_world.hello:
+  path: '/hello'
+  defaults:
+    _controller: Drupal\hello_world\Controller\HelloWorldController::HelloWorld
+    _title: 'Hello world route'
+  requirements:
+    _permission: 'access content'
+
+hello_world.greeting_form:
+  path: '/admin/config/salutation-configuration'
+  defaults:
+    _form: Drupal\hello_world\Form\SalutationConfigurationForm
+  requirements:
+    _permission: 'access content'
