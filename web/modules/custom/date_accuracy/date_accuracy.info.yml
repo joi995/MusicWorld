@@ -1,4 +1,5 @@
 name: "Date Accuracy"
 description: "Holds the date accuracy field"
-core_version_requirement: 10^
+core_version_requirement: ^10
 type: module
+package: "Háskólinn í Reykjavík"
