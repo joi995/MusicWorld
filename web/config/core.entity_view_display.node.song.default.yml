@@ -22,7 +22,7 @@ mode: default
 content:
   field_artist:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -38,7 +38,7 @@ content:
     region: content
   field_genre:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -46,7 +46,7 @@ content:
     region: content
   field_length:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -61,7 +61,7 @@ content:
     region: content
   field_song_name:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }

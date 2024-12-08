@@ -31,7 +31,7 @@ content:
     region: content
   field_band_break_up:
     type: datetime_default
-    label: above
+    label: inline
     settings:
       timezone_override: ''
       format_type: olivero_medium
@@ -40,7 +40,7 @@ content:
     region: content
   field_band_formed:
     type: datetime_default
-    label: above
+    label: inline
     settings:
       timezone_override: ''
       format_type: olivero_medium
@@ -58,7 +58,7 @@ content:
     region: content
   field_band_name:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }

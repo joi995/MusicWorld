@@ -11,7 +11,7 @@ id: node.publisher.field_dod
 field_name: field_dod
 entity_type: node
 bundle: publisher
-label: 'Date of death'
+label: 'Shut Down'
 description: ''
 required: false
 translatable: false

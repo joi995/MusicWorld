@@ -12,9 +12,11 @@ dependencies:
     - field.field.node.album.field_songs
     - field.field.node.album.field_spotify
     - field.field.node.album.field_tag
+    - image.style.large
     - node.type.album
   module:
     - datetime
+    - media
     - text
     - user
 id: node.album.default
@@ -30,17 +32,19 @@ content:
     weight: 6
     region: content
   field_album_cover:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: above
     settings:
-      view_mode: default
-      link: false
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 2
     region: content
   field_album_name:
     type: string
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -48,7 +52,7 @@ content:
     region: content
   field_artist:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -56,7 +60,7 @@ content:
     region: content
   field_publisher:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -64,7 +68,7 @@ content:
     region: content
   field_released:
     type: datetime_default
-    label: above
+    label: inline
     settings:
       timezone_override: ''
       format_type: olivero_medium
@@ -81,7 +85,7 @@ content:
     region: content
   field_spotify:
     type: text_default
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     weight: 8

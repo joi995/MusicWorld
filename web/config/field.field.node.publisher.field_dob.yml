@@ -11,7 +11,7 @@ id: node.publisher.field_dob
 field_name: field_dob
 entity_type: node
 bundle: publisher
-label: 'Date of Birth'
+label: Founded
 description: ''
 required: false
 translatable: false
