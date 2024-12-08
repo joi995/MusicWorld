@@ -1,0 +1,9 @@
+uuid: 91145889-58a5-453c-a3af-4c27ad9f485d
+langcode: en
+status: true
+dependencies: {  }
+name: Genres
+vid: genres
+description: 'Music Genres'
+weight: 0
+new_revision: true

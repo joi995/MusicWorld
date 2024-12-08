@@ -1,0 +1,26 @@
+uuid: 82cbcd73-d236-4dbc-9800-f7dc92560927
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_band_about
+    - filter.format.full_html
+    - node.type.band
+  module:
+    - text
+id: node.band.field_band_about
+field_name: field_band_about
+entity_type: node
+bundle: band
+label: About
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

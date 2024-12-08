@@ -1,0 +1,74 @@
+uuid: 43d1539d-13e4-4b2a-8544-7012c25e198a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.publisher.field_artsit_image
+    - field.field.node.publisher.field_dob
+    - field.field.node.publisher.field_dod
+    - field.field.node.publisher.field_name
+    - field.field.node.publisher.field_website
+    - node.type.publisher
+  module:
+    - datetime
+    - link
+    - user
+id: node.publisher.default
+targetEntityType: node
+bundle: publisher
+mode: default
+content:
+  field_artsit_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_dob:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: olivero_medium
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_dod:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: olivero_medium
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,50 @@
+uuid: 3f03b9bc-cb38-43b0-8139-7482b4d5f360
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.advertisment_block
+  module:
+    - node
+    - user
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__advertisment_block_block_1
+theme: olivero
+region: sidebar
+weight: -7
+provider: null
+plugin: 'views_block:advertisment_block-block_1'
+settings:
+  id: 'views_block:advertisment_block-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      content_editor: content_editor
+      administrator: administrator
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      advertisment: advertisment
+      album: album
+      article: article
+      artist: artist
+      band: band
+      page: page
+      publisher: publisher
+      song: song

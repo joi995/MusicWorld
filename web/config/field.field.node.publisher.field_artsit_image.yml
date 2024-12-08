@@ -1,0 +1,34 @@
+uuid: e6d83adb-d51c-446c-9131-292237d148be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artsit_image
+    - media.type.image
+    - node.type.publisher
+  content:
+    - 'media:image:f614c185-8a4e-4b23-8ed3-37508edd4125'
+id: node.publisher.field_artsit_image
+field_name: field_artsit_image
+entity_type: node
+bundle: publisher
+label: 'Artist Image'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: f614c185-8a4e-4b23-8ed3-37508edd4125
+    weight: 0
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

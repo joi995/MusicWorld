@@ -1,0 +1,21 @@
+uuid: 3c1388a2-31ee-4eb2-a4d5-a2d0935abe56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_band_break_up
+    - node.type.band
+  module:
+    - datetime
+id: node.band.field_band_break_up
+field_name: field_band_break_up
+entity_type: node
+bundle: band
+label: 'Band Break Up'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

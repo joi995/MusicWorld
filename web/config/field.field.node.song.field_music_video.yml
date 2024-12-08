@@ -1,0 +1,24 @@
+uuid: a55690d1-667f-490c-a1fa-4a3eeb78f579
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_music_video
+    - filter.format.full_html
+    - node.type.song
+  module:
+    - text
+id: node.song.field_music_video
+field_name: field_music_video
+entity_type: node
+bundle: song
+label: 'Music Video'
+description: 'Embedded video from youtube'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

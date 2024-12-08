@@ -1,0 +1,21 @@
+uuid: 1d8e0018-c31a-470f-812b-6e90f7af0297
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dob
+    - node.type.publisher
+  module:
+    - datetime
+id: node.publisher.field_dob
+field_name: field_dob
+entity_type: node
+bundle: publisher
+label: 'Date of Birth'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,19 @@
+uuid: 34835002-101f-44ff-bc2d-ab6e5b4c0990
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_real_name
+    - node.type.artist
+id: node.artist.field_real_name
+field_name: field_real_name
+entity_type: node
+bundle: artist
+label: 'Real Name'
+description: "Maximum length is based on UK standards \r\nLink for source:\r\nhttps://webarchive.nationalarchives.gov.uk/ukgwa/20100407211619/http://www.cabinetoffice.gov.uk/govtalk/schemasstandards/e-gif/datastandards/person_information/person_name/person_full_name.aspx"
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

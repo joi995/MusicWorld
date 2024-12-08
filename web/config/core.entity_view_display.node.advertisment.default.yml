@@ -1,0 +1,44 @@
+uuid: ff186491-e438-4588-abee-185e6b5ab254
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.advertisment.field_advertisement_image
+    - field.field.node.advertisment.field_website
+    - node.type.advertisment
+  module:
+    - link
+    - user
+id: node.advertisment.default
+targetEntityType: node
+bundle: advertisment
+mode: default
+content:
+  field_advertisement_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

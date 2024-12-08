@@ -1,0 +1,57 @@
+uuid: fb94ed54-d072-409e-9949-9ef60973b725
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.album.field_about
+    - field.field.node.album.field_album_cover
+    - field.field.node.album.field_album_name
+    - field.field.node.album.field_artist
+    - field.field.node.album.field_publisher
+    - field.field.node.album.field_released
+    - field.field.node.album.field_songs
+    - field.field.node.album.field_spotify
+    - field.field.node.album.field_tag
+    - node.type.album
+  module:
+    - media
+    - user
+id: node.album.teaser
+targetEntityType: node
+bundle: album
+mode: teaser
+content:
+  field_album_cover:
+    type: media_thumbnail
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_artist:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_about: true
+  field_album_name: true
+  field_publisher: true
+  field_released: true
+  field_songs: true
+  field_spotify: true
+  field_tag: true
+  langcode: true

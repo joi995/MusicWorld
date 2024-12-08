@@ -1,0 +1,45 @@
+uuid: 244876dc-ec75-4323-afcf-2d5f14f674e4
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.advertisment.field_advertisement_image
+    - field.field.node.advertisment.field_website
+    - node.type.advertisment
+  module:
+    - link
+    - user
+id: node.advertisment.full
+targetEntityType: node
+bundle: advertisment
+mode: full
+content:
+  field_advertisement_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,17 @@
+uuid: 3cf8e4b0-2813-4dfd-93e3-bd2a13063864
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Album
+type: album
+description: 'An album with refferenced songs and artists'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

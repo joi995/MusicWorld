@@ -1,0 +1,24 @@
+uuid: 9a119924-0b12-41c0-a13c-19756f474d12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spotify
+    - filter.format.full_html
+    - node.type.album
+  module:
+    - text
+id: node.album.field_spotify
+field_name: field_spotify
+entity_type: node
+bundle: album
+label: Spotify
+description: 'Embedded link from spotify'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

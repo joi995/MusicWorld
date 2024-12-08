@@ -1,0 +1,21 @@
+uuid: a7beef72-7555-4247-a1d0-f441af1701de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dob
+    - node.type.artist
+  module:
+    - datetime
+id: node.artist.field_dob
+field_name: field_dob
+entity_type: node
+bundle: artist
+label: 'Date of Birth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

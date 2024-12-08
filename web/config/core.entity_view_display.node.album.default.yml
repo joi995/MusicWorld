@@ -1,0 +1,96 @@
+uuid: f7f6d458-c0a3-4acb-b2c4-0531501df89c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.album.field_about
+    - field.field.node.album.field_album_cover
+    - field.field.node.album.field_album_name
+    - field.field.node.album.field_artist
+    - field.field.node.album.field_publisher
+    - field.field.node.album.field_released
+    - field.field.node.album.field_songs
+    - field.field.node.album.field_spotify
+    - field.field.node.album.field_tag
+    - node.type.album
+  module:
+    - datetime
+    - text
+    - user
+id: node.album.default
+targetEntityType: node
+bundle: album
+mode: default
+content:
+  field_about:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_album_cover:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_album_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_artist:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_publisher:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_released:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: olivero_medium
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_songs:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_spotify:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_tag: true
+  langcode: true

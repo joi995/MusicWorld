@@ -1,0 +1,20 @@
+uuid: d7c1dda9-6b1e-4768-8ae8-c16e512e23b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_album_cover
+field_name: field_album_cover
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

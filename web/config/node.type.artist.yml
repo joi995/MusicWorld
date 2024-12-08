@@ -1,0 +1,17 @@
+uuid: b4b45e46-6913-46f6-9990-23d17c880c12
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Artist
+type: artist
+description: 'Musical Artist'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

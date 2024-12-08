@@ -1,0 +1,23 @@
+uuid: 42ea9a5d-253e-4485-a94c-fb820c954b0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.publisher
+  module:
+    - link
+id: node.publisher.field_website
+field_name: field_website
+entity_type: node
+bundle: publisher
+label: Website
+description: 'Link to the artists website'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

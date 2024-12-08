@@ -1,0 +1,34 @@
+uuid: dfde745a-548b-4791-9912-142d0b573ed8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_album_cover
+    - media.type.image
+    - node.type.album
+  content:
+    - 'media:image:e48a54da-98b3-4221-9d4a-0be10f624fab'
+id: node.album.field_album_cover
+field_name: field_album_cover
+entity_type: node
+bundle: album
+label: 'Album Cover'
+description: 'Image of the album cover'
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: e48a54da-98b3-4221-9d4a-0be10f624fab
+    weight: 0
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

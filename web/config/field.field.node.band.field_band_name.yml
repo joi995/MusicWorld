@@ -1,0 +1,19 @@
+uuid: cffe7432-15df-40cb-8b41-47e2af6c464f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_band_name
+    - node.type.band
+id: node.band.field_band_name
+field_name: field_band_name
+entity_type: node
+bundle: band
+label: name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

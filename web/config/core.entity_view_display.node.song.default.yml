@@ -1,0 +1,84 @@
+uuid: 913fe350-e311-44f4-a10b-9097da191c3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.song.field_artist
+    - field.field.node.song.field_feature
+    - field.field.node.song.field_genre
+    - field.field.node.song.field_length
+    - field.field.node.song.field_music_video
+    - field.field.node.song.field_song_name
+    - field.field.node.song.field_spotify
+    - field.field.node.song.field_tag
+    - node.type.song
+  module:
+    - text
+    - user
+id: node.song.default
+targetEntityType: node
+bundle: song
+mode: default
+content:
+  field_artist:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_feature:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_genre:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_length:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_music_video:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_song_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_spotify:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_tag: true
+  langcode: true

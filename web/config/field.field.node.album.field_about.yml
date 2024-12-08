@@ -1,0 +1,26 @@
+uuid: 0d09bf76-28b3-4ab9-8747-0ed83fe93e61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about
+    - filter.format.full_html
+    - node.type.album
+  module:
+    - text
+id: node.album.field_about
+field_name: field_about
+entity_type: node
+bundle: album
+label: About
+description: 'An about section for the album'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

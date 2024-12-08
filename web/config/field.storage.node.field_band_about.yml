@@ -1,0 +1,19 @@
+uuid: 3fb845eb-e2d7-4935-af3d-358f4b236909
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_band_about
+field_name: field_band_about
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

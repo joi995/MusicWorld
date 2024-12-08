@@ -1,0 +1,21 @@
+uuid: 0fad3cfa-4ae8-4b2a-b7e5-03b0c653004c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_band_formed
+    - node.type.band
+  module:
+    - datetime
+id: node.band.field_band_formed
+field_name: field_band_formed
+entity_type: node
+bundle: band
+label: 'Band Formed'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

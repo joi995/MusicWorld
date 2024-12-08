@@ -1,0 +1,19 @@
+uuid: 85d7734d-baab-492f-a409-b99297ea5706
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_name
+    - node.type.artist
+id: node.artist.field_name
+field_name: field_name
+entity_type: node
+bundle: artist
+label: Name
+description: "maximum length is 70 based on uk data standards,\r\nlink to source below\r\nhttps://webarchive.nationalarchives.gov.uk/ukgwa/20100407211619/http://www.cabinetoffice.gov.uk/govtalk/schemasstandards/e-gif/datastandards/person_information/person_name/person_full_name.aspx"
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

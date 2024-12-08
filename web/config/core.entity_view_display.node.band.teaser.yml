@@ -1,0 +1,37 @@
+uuid: 681807a8-f6ed-47d9-889d-bc392f946b04
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.band.field_band_about
+    - field.field.node.band.field_band_break_up
+    - field.field.node.band.field_band_formed
+    - field.field.node.band.field_band_image
+    - field.field.node.band.field_band_name
+    - field.field.node.band.field_members
+    - field.field.node.band.field_tag
+    - field.field.node.band.field_website
+    - node.type.band
+  module:
+    - user
+id: node.band.teaser
+targetEntityType: node
+bundle: band
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_band_about: true
+  field_band_break_up: true
+  field_band_formed: true
+  field_band_image: true
+  field_band_name: true
+  field_members: true
+  field_tag: true
+  field_website: true
+  langcode: true
